@@ -1,9 +1,7 @@
-const express = require ('express');
+const express = require ('express')
 const authRoutes = require ('./routes/auth.js')
-const app = express ();
+const app = express ()
 
 app.use ('/api/auth', authRoutes)
-
-
-
-module.exports = app;
+ 
+module.exports = app
