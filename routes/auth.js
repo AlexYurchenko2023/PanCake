@@ -1,14 +1,13 @@
 // Отвечает за регистрацию пользователя
 
 const express = require ('express')
+const controllers = require ('../controllers/auth.js')
 const router = express.Router()
 
 //localhost:3000/api/auth/login
+router.get ('/login', controllers.login)
+//localhost:3000/api/auth/register
+router.get ('/register', controllers.register)
 
-router.get ('/login', (req, res) =>{
-    res.status(200).json({
-        login: true
-    })
-})
 
-module.export = router
+module.exports = router
